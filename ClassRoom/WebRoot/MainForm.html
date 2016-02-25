@@ -1,0 +1,164 @@
+<html>
+<head>
+<title>Register.com</title>
+</head>
+<body>
+<form action="" name="register" >
+<p><strong><b><font size="3" face="verdana">1.Personal Details</font></strong><font size="3" face="verdana"></font></p>
+  <table height="247" border="0" align="left">
+  <tr>
+    <td><em><font size="3" face="verdana">First Name</font></em></td>
+    <td><input type="text" name="fname" value=""/></td>
+  </tr>
+  <tr>
+    <td><em><font size="3" face="verdana">Last Name</font></em></td>
+    <td><input type="text" name="lname" value=""/></td>
+  </tr>
+  <tr>
+    <td><em><font size="3" face="verdana">Birth Date </font></em></td>
+    <td><input type="text" name="bdate" readonly="readonly" />
+      <a href="javascript:show_calendar('document.register.bdate', document.register.bdate.value);"> <img src="images/cal.gif" alt="a" width="18" height="18" border="0"/></a> </td>
+  </tr>
+  <tr>
+    <td><em><font size="3" face="verdana">Browse Photo</font></em></td>
+    <td><input type="file" name="photo" class="textfield" onChange="preview(this)"/></td>
+  </tr>
+  <tr>
+    <td><em><font size="3" face="verdana">Email</font></em></td>
+    <td><input type="text" name="email" value=""/></td>
+  </tr>
+  <tr>
+    <td height="50"><em><font size="3" face="verdana">Fax No</font></em></td>
+    <td><input type="text" name="fax" value=""/></td>
+  </tr>
+</table>
+
+  <img alt="See Photo Here" id="previewField" src="images/default.gif">
+  <table border="0" align="right">
+  <tr>
+    <td>&nbsp;</td>
+  </tr>
+</table>
+<br/><hr/>
+<p><strong><b></strong></p>
+<p><strong><font size="3" face="Verdana">2.Contact Details</font></strong><font size="3" face="Verdana"></font></p>
+<table border="0" align="left">
+<tr>
+    <td><em><font size="3" face="Verdana"> Address Type </font></em></td>
+    <td><em>
+      <select name="addressType">
+          <option value="select" selected="true"><font size="3" face="Verdana">Select </font></option>
+          <option value="home"><font size="3" face="Verdana">Home</font></option>
+          <option value="office"><font size="3" face="Verdana">Office</font></option>
+          <option value="personal"><font size="3" face="Verdana">Personal</font></option>
+      </select>
+    </em></td></tr>
+<tr></tr>
+<tr>
+    <td><em><font size="3" face="Verdana"> House No</font></em></td>
+    <td><em>
+      <input type="text" name="houseNo" value="" size="20"/>
+    </em></td>
+</tr>
+<tr>
+    <td><em><font size="3" face="Verdana">Street</font></em></td>
+    <td><em>
+      <input type="text" name="street" value="" size="20"/>
+    </em></td>
+</tr>
+<tr>
+    <td><em><font size="3" face="Verdana"> Phone Type</font></em></td>
+    <td><em>
+      <select name="phoneType">
+        <option value="select" selected="true"><font size="3" face="Verdana">Select</font></option>
+        <option value="home"><font size="3" face="Verdana">Home</font></option>
+        <option value="office"><font size="3" face="Verdana">Office</font></option>
+        <option value="mobile"><font size="3" face="Verdana">Mobile</font></option>
+        </select>
+    </em></td>
+</tr>
+<tr>
+    <td><em><font size="3" face="Verdana"> Phone No</font></em></td>
+    <td><em>
+      <input type="text" name="phoneNo" value="" size="20"/>
+    </em></td>
+</tr>
+  
+</table>   
+<table border="0" align="center">
+<font size="8" face="Verdana">
+<tr>
+    <td><em><font size="3" face="Verdana"> City</font></em></td>
+    <td><input type="text" name="city" value="" size="20"/></td>
+</tr>
+<tr>
+    <td><em><font size="3" face="Verdana"> State</font></em></td>
+    <td><input type="text" name="state" value="" size="20"/></td>
+</tr>
+<tr>
+    <td><em><font size="3" face="Verdana"> Country</font></em></td>
+    <td><input type="text" name="country" value="" size="20"/></td>
+</tr>
+<tr>
+    <td><em><font size="3" face="Verdana"> Pin</font></em></td>
+    <td><input type="text" name="pin" value="" size="20"/></td>
+</tr>
+<tr>
+    <td><em><font size="3" face="Verdana"> Fax No</font></em></td>
+    <td><input type="text" name="faxNo" value="" size="20"/></td>
+</tr>
+
+</table>
+<p>&nbsp;</p>
+<p><br/>
+</p>
+<hr/>
+<br/>
+<p><strong><b><font size="3" face="verdana">3.Account Details</font></strong><font size="3" face="verdana"></font></p>
+<table border="0" align="left">
+<tr></tr>
+<tr>
+    <td><font size="3" face="Verdana"> User Name</font></td>
+    <td><input type="text" name="userName" value="" size="20"/>
+    &nbsp&nbsp<font size="3" face="Verdana"><input type="submit" name="submit" value="check"></font></td>
+</tr>
+<tr>
+    <td><font size="3" face="Verdana">Password</font></td>
+    <td><input type="text" name="password" value="" size="20"/></td>
+</tr>
+<tr>
+    <td><font size="3" face="Verdana"> Confirm</font></td>
+    <td><input type="text" name="confirm" value="" size="20"/></td>
+</tr>
+<tr>
+    <td><font size="3" face="Verdana"> Security Question</font></td>
+    <td><select name="squest">
+      <option value="select" selected="true"><font size="3" face="Verdana">--Select One---</font></option>
+      <option value="What is your favorite pastime?"><font size="3" face="Verdana">What is your favorite pastime?</font></option>
+      <option value="Who your childhood hero?"><font size="3" face="Verdana">Who your childhood hero?</font></option>
+      <option value="What is the name of your first school?"><font size="3" face="Verdana">What is the name of your first school?</font></option>
+      <option value="Where did you meet your spouse?"><font size="3" face="Verdana">Where did you meet your spouse?</font></option>
+      <option value="What is your favorite sports team?"><font size="3" face="Verdana">What is your favorite sports team?</font></option>
+      <option value="What is your father middle name?"><font size="3" face="Verdana">What is your father middle name?</font></option>
+      <option value="What was your high school mascot?"><font size="3" face="Verdana">What was your high school mascot?</font></option>
+      <option value="What make was your first car or bike?"><font size="3" face="Verdana">What make was your first car or bike?</font></option>
+      <option value="What is your pet name?"><font size="3" face="Verdana">What is your pet name?</font></option>
+    </select></td>
+</tr>
+<tr>
+    <td><font size="3" face="Verdana"> Security Answer</font></td>
+    <td><input type="text" name="state" value="" size="37"/></td>
+</tr>
+<tr>
+    <td><font size="3" face="Verdana"> Country</font></td>
+    <td><input type="text" name="country" value="" size="20"/></td>
+</tr>
+<tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+<tr>
+    <td><font size="3" face="Verdana"><center><input type="submit" name="createAccount" value="Register"/></center></font></td>
+    <td><font size="3" face="Verdana"><center><input type="submit" name="cancel" value="Cancel"/></center></font></td>
+</tr>
+</table>
+</form>
+</body>
+</html>                      
