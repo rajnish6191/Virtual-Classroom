@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee   http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InitServlet</servlet-name>
+    <servlet-class>com.dts.core.util.InitServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/config/system.properties</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>action</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet>
+    <servlet-name>action_tmp</servlet-name>
+    <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+    <init-param>
+      <param-name>config</param-name>
+      <param-value>/WEB-INF/struts-config.xml</param-value>
+    </init-param>
+    <init-param>
+      <param-name>debug</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <init-param>
+      <param-name>detail</param-name>
+      <param-value>3</param-value>
+    </init-param>
+    <load-on-startup>0</load-on-startup>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>InitServlet</servlet-name>
+    <url-pattern>/initservlet</url-pattern>
+  </servlet-mapping>
+  <!-- Framework Controller Configuration -->
+  <servlet>
+    <servlet-name>DispatchController</servlet-name>
+    <servlet-class>com.dts.core.control.DispatchController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ExportController</servlet-name>
+    <servlet-class>com.dts.core.control.ExportController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ReportController</servlet-name>
+    <servlet-class>com.dts.core.control.ReportController</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>UIController</servlet-name>
+    <servlet-class>com.dts.core.control.UIController</servlet-class>
+  </servlet>
+  <!-- Framework Controller Mapping -->
+  <servlet-mapping>
+    <servlet-name>DispatchController</servlet-name>
+    <url-pattern>/DispatchController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExportController</servlet-name>
+    <url-pattern>/ExportController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ReportController</servlet-name>
+    <url-pattern>/ReportController</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UIController</servlet-name>
+    <url-pattern>/UIController</url-pattern>
+  </servlet-mapping>
+  <!-- Supported Export Modes of ExportController  -->
+  <servlet>
+    <servlet-name>ExportPDF</servlet-name>
+    <servlet-class>com.dts.core.export.ExportPDF</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ExportTXT</servlet-name>
+    <servlet-class>com.dts.core.export.ExportTXT</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>ExportXLS</servlet-name>
+    <servlet-class>com.dts.core.export.ExportXLS</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RegisterAction</servlet-name>
+    <servlet-class>com.dts.project.action.RegisterAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginAction</servlet-name>
+    <servlet-class>com.dts.project.action.LoginAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangequestionAction</servlet-name>
+    <servlet-class>com.dts.project.action.ChangequestionAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChangePasswordAction</servlet-name>
+    <servlet-class>com.dts.project.action.ChangePasswordAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>RecoverPasswordAction</servlet-name>
+    <servlet-class>com.dts.project.action.RecoverPasswordAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ChekUserAction</servlet-name>
+    <servlet-class>com.dts.project.action.ChekUserAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddFeedbackAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddFeedbackAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>AddResultAction</servlet-name>
+    <servlet-class>com.dts.project.action.AddResultAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ViewResultAction</servlet-name>
+    <servlet-class>com.dts.project.action.ViewResultAction</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ViewFeedBackAction</servlet-name>
+    <servlet-class>com.dts.project.action.ViewFeedBackAction</servlet-class>
+  </servlet>
+
+
+
+
+
+
+ 
+
+  <servlet-mapping>
+    <servlet-name>ExportPDF</servlet-name>
+    <url-pattern>/ExportPDF</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExportTXT</servlet-name>
+    <url-pattern>/ExportTXT</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ExportXLS</servlet-name>
+    <url-pattern>/ExportXLS</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RegisterAction</servlet-name>
+    <url-pattern>/RegisterAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginAction</servlet-name>
+    <url-pattern>/LoginAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangequestionAction</servlet-name>
+    <url-pattern>/ChangequestionAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChangePasswordAction</servlet-name>
+    <url-pattern>/ChangePasswordAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>action</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>RecoverPasswordAction</servlet-name>
+    <url-pattern>/RecoverPasswordAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ChekUserAction</servlet-name>
+    <url-pattern>/ChekUserAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddFeedbackAction</servlet-name>
+    <url-pattern>/AddFeedbackAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>AddResultAction</servlet-name>
+    <url-pattern>/AddResultAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewResultAction</servlet-name>
+    <url-pattern>/ViewResultAction</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ViewFeedBackAction</servlet-name>
+    <url-pattern>/ViewFeedBackAction</url-pattern>
+  </servlet-mapping>
+  
+  <welcome-file-list>
+    <welcome-file>LoginForm.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
+

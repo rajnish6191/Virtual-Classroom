@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+  <struts-config>
+  <data-sources />
+  <form-beans >
+    <form-bean name="StudentMasterForm" type="com.yourcompany.struts.form.StudentMasterForm" />
+    <form-bean name="FacultyMasterForm" type="com.yourcompany.struts.form.FacultyMasterForm" />
+    <form-bean name="CourseMasterForm" type="com.yourcompany.struts.form.CourseMasterForm" />
+    <form-bean name="CourseFacultyMasterForm" type="com.yourcompany.struts.form.CourseFacultyMasterForm" />
+    <form-bean name="facultyAchievementsForm" type="com.yourcompany.struts.form.FacultyAchievementsForm" />
+    <form-bean name="studentCourseMasterForm" type="com.yourcompany.struts.form.StudentCourseMasterForm" />
+    <form-bean name="courseLecturerMasterForm" type="com.yourcompany.struts.form.CourseLecturerMasterForm" />
+    <form-bean name="facultyNoticesMasterForm" type="com.yourcompany.struts.form.FacultyNoticesMasterForm" />
+    <form-bean name="studentAttendanceMasterForm" type="com.yourcompany.struts.form.StudentAttendanceMasterForm" />
+    <form-bean name="examinationScheduleForm" type="com.yourcompany.struts.form.ExaminationScheduleForm" />
+    <form-bean name="examQuestionMasterForm" type="com.yourcompany.struts.form.ExamQuestionMasterForm" />
+    <form-bean name="studentExaminationMasterForm" type="com.yourcompany.struts.form.StudentExaminationMasterForm" />
+    <form-bean name="studentExaminationDetailsForm" type="com.yourcompany.struts.form.StudentExaminationDetailsForm" />
+    <form-bean name="studentAssignSubmissionMasterForm" type="com.yourcompany.struts.form.StudentAssignSubmissionMasterForm" />
+    <form-bean name="assignmentRemarksForm" type="com.yourcompany.struts.form.AssignmentRemarksForm" />
+    <form-bean name="chatRoomMasterForm" type="com.yourcompany.struts.form.ChatRoomMasterForm" />
+    <form-bean name="voiceMailBoxMasterForm" type="com.yourcompany.struts.form.VoiceMailBoxMasterForm" />
+    <form-bean name="newsLetterMasterForm" type="com.yourcompany.struts.form.NewsLetterMasterForm" />
+    <form-bean name="facultyOnlineMasterForm" type="com.yourcompany.struts.form.FacultyOnlineMasterForm" />
+    <form-bean name="studentOnlineForm" type="com.yourcompany.struts.form.StudentOnlineForm" />
+    <form-bean name="emailMasterForm" type="com.yourcompany.struts.form.EmailMasterForm" />
+    <form-bean name="emailDetailsForm" type="com.yourcompany.struts.form.EmailDetailsForm" />
+    <form-bean name="designationMasterForm" type="com.yourcompany.struts.form.DesignationMasterForm" />
+    <form-bean name="customerTransactionMasterForm" type="com.yourcompany.struts.form.CustomerTransactionMasterForm" />
+    <form-bean name="meetingForm" type="com.yourcompany.struts.form.MeetingForm" />
+    <form-bean name="profileForm" type="com.yourcompany.struts.form.ProfileForm" />
+
+  </form-beans>
+
+  <global-exceptions />
+  <global-forwards />
+  <action-mappings >
+    <action
+    attribute="FacultyMasterForm"
+    name="FacultyMasterForm"
+    scope="request" 
+    path="/faculytMaster" type="com.dts.project.action.FaculytMasterAction">
+      <forward name="success" path="/FacultyMaster.jsp?status=adding faculty success" />
+      <forward name="failure" path="/FacultyMaster.jsp?status=adding faculty failure" />
+    </action>
+    <action
+    attribute="facultyAchievementsForm"
+    name="facultyAchievementsForm"
+    scope="request" 
+     path="/facultyAchievements" type="com.dts.project.action.FacultyAchievementsAction">
+      <forward name="success" path="/FacultyAchievements.jsp?status=adding facultyAchievements success" />
+      <forward name="failure" path="/FacultyAchievements.jsp?status=adding facultyAchievements failure" />
+    </action>
+    
+    <action 
+      attribute="StudentMasterForm"
+      name="StudentMasterForm"
+      scope="request"
+      path="/student" type="com.dts.project.action.StudentAction">
+      <forward name="success" path="/StudentMaster.jsp?status=adding student success " />
+      <forward name="failure" path="/StudentMaster.jsp?status=adding student failure" />
+    </action>
+    <action 
+    attribute="facultyOnlineMasterForm"
+    name="facultyOnlineMasterForm"
+    scope="request"
+    path="/facultyOnlineMaster" type="com.dts.project.action.FacultyOnlineMasterAction">
+      <forward name="success" path="/FacultyOnlineMaster.jsp?status=adding facultyOnlineMaster success" />
+      <forward name="failure" path="/FacultyOnlineMaster.jsp?status=adding facultyOnlineMaster failure" />
+    </action>
+    <action
+     attribute="studentOnlineForm"
+     name="studentOnlineForm"
+     scope="request"
+    path="/studentsOnline" type="com.dts.project.action.StudentsOnlineAction" >
+      <forward name="success" path="/StudentOnline.jsp?status=adding studentOnline success" />
+      <forward name="failure" path="/StudentOnline.jsp?status=adding studentOnline failure" />
+    </action>
+    <action
+     attribute="CourseMasterForm"
+     name="CourseMasterForm"
+     scope="request"
+    path="/courseMaster" type="com.dts.project.action.CourseMasterAction">
+      <forward name="success" path="/CourseMaster.jsp?status=adding CourseMaster success" />
+      <forward name="failure" path="/CourseMaster.jsp?status=adding CourseMaster failure" />
+    </action>
+    <action
+    attribute="examinationScheduleForm"
+    name="examinationScheduleForm"
+    scope="request"
+    path="/examinationSchedule" type="com.dts.project.action.ExaminationScheduleAction">
+      <forward name="success" path="/ExaminationSchedule.jsp?status=adding examinationSchedule success" />
+      <forward name="failure" path="/ExaminationSchedule.jsp?status=adding examinationSchedule failure" />
+    </action>
+    <action
+    attribute="chatRoomMasterForm"
+    name="chatRoomMasterForm"
+    scope="request" 
+    path="/chatRoomMaster" type="com.dts.project.action.ChatRoomMasterAction">
+      <forward name="success" path="/ChatRoomMaster.jsp?status=adding chatRoom success" />
+      <forward name="failure" path="/ChatRoomMaster.jsp?status=adding chatRoom failure" />
+    </action>
+    <action
+     attribute="newsLetterMasterForm"
+     name="newsLetterMasterForm"
+     scope="request"
+    path="/newsLetterMaster" type="com.dts.project.action.NewsLetterMasterAction">
+      <forward name="success" path="/NewsLetterMaster.jsp?status=adding NewsLetterMaster success" />
+      <forward name="failure" path="/NewsLetterMaster.jsp?status=adding newsLetterMaster failure" />
+    </action>
+    <action
+    name="emailMasterForm"
+    attribute="emailMasterForm"
+    scope="request" 
+    path="/emailMaster" type="com.dts.project.action.EmailMasterAction">
+      <forward name="success" path="/EmailMaster.jsp?status=adding emailMaster success" />
+      <forward name="failure" path="/EmailMaster.jsp?status=adding emailMaster failure" />
+    </action>
+    <action
+    name="emailMasterForm"
+    attribute="emailMasterForm"
+    scope="request" 
+    path="/facultyemailMaster" type="com.dts.project.action.EmailMasterAction">
+      <forward name="success" path="/FacultyEmailMaster.jsp?status=adding emailMaster success" />
+      <forward name="failure" path="/FacultyEmailMaster.jsp?status=adding emailMaster failure" />
+    </action>
+   
+    <action
+    attribute="CourseFacultyMasterForm"
+    name="CourseFacultyMasterForm"
+    scope="request" 
+    path="/courseFacultyMaster" type="com.dts.project.action.CourseFacultyMasterAction">
+      <forward name="success" path="/CourseFacultyMaster.jsp?status=adding courseFaculty success" />
+      <forward name="failure" path="/CourseFacultyMaster.jsp?status=adding courseFaculty failed" />
+    </action>
+    <action
+    attribute="courseLecturerMasterForm"
+    name="courseLecturerMasterForm"
+    scope="request" 
+    path="/courseLecturerMaster" type="com.dts.project.action.CourseLecturerMasterAction">
+      <forward name="success" path="/CourseLecturerMaster.jsp?status=adding courseLecturer success" />
+      <forward name="failure" path="/CourseLecturerMaster.jsp?status=adding courseLecturer failure" />
+    </action>
+    <action
+    attribute="studentAssignSubmissionMasterForm"
+    name="studentAssignSubmissionMasterForm"
+    scope="request" 
+    path="/studentAssignmentSubmission" type="com.dts.project.action.StudentAssignmentSubmissionAction">
+      <forward name="success" path="/StudentAssignSubmissionMaster.jsp?status=adding studentAssignmentSubmission success" />
+      <forward name="failure" path="/StudentAssignSubmissionMaster.jsp?status=adding studentAssignmentsSubmission failure" />
+    </action>
+    <action
+    attribute="studentAttendanceMasterForm"
+    name="studentAttendanceMasterForm"
+    scope="request" 
+    path="/studentsAttendenceMaster" type="com.dts.project.action.StudentsAttendenceMasterAction">
+      <forward name="success" path="/StudentAttendanceMaster.jsp?status=adding StudentAttendence success" />
+      <forward name="failure" path="/StudentAttendanceMaster.jsp?status=adding StudentAttendence failure" />
+    </action>
+    <action
+    attribute="studentCourseMasterForm"
+    name="studentCourseMasterForm" 
+    scope="request"
+    path="/studentCourse" type="com.dts.project.action.StudentCourseAction">
+      <forward name="success" path="/StudentCourseMaster.jsp?status=adding Student Course success" />
+      <forward name="failure" path="/StudentCourseMaster.jsp?status=adding StudentCourse failure" />
+    </action>
+    <action
+    attribute="studentExaminationMasterForm"
+    name="studentExaminationMasterForm"
+    scope="request" 
+    path="/studentExaminationMaster" type="com.dts.project.action.StudentExaminationMasterAction">
+      <forward name="success" path="/StudentExaminationMaster.jsp?status=adding StudentExamination success" />
+      <forward name="failure" path="/StudentExaminationMaster.jsp?status=adding StudentExamination failure" />
+    </action>
+    <action
+    attribute="studentExaminationDetailsForm"
+    name="studentExaminationDetailsForm"
+    scope="request" 
+    path="/studentExaminationDetails" type="com.dts.project.action.StudentExaminationDetailsAction">
+      <forward name="success" path="/StudentExaminationDetails.jsp?status=adding studentExaminationDetails success" />
+      <forward name="failure" path="/StudentExaminationDetails.jsp?status=adding studentExaminationDetails failure" />
+    </action>
+    <action
+    attribute="voiceMailBoxMasterForm"
+    name="voiceMailBoxMasterForm"
+    scope="request" 
+    path="/voiceMailBoxMaster" type="com.dts.project.action.VoiceMailBoxMasterAction">
+      <forward name="success" path="/VoiceMailBoxMaster.jsp?status=adding voiceMailBox success" />
+      <forward name="failure" path="/VoiceMailBoxMaster.jsp?status=adding voiceMailBox failure" />
+    </action>
+    <action
+    attribute="facultyNoticesMasterForm"
+    name="facultyNoticesMasterForm"
+    scope="request" 
+    path="/facultyNoticesMaster" type="com.dts.project.action.FacultyNoticesMasterAction">
+      <forward name="success" path="/FacultyNoticesMaster.jsp?status=adding facultyNotices success" />
+      <forward name="failure" path="/FacultyNoticesMaster.jsp?status=adding facultyNotices failure" />
+    </action>
+    <action
+    attribute="profileForm"
+    name="profileForm"
+    scope="request" 
+    path="/register" type="com.dts.project.action.RegisterAction">
+      <forward name="success" path="/LoginForm.jsp?status=Registraing success" />
+      <forward name="failure" path="/Registerform.jsp?status=registration failure" />
+    </action>
+    <action path="/viewCourseMaster" type="com.dts.project.action.ViewCourseMasAction">
+      <forward name="viewCourses" path="/ViewCourseMaster.jsp" />
+    </action>
+    <action path="/viewFaculty" type="com.dts.project.action.ViewFacultyAction">
+      <forward name="viewFaculty" path="/ViewFacultyMaster.jsp" />
+    </action>
+    <action path="/viewFacultyAchievments" type="com.dts.project.action.ViewFacultyAchievmentsAction">
+      <forward name="viewFacultyAchievments" path="/ViewFacultyAchievements.jsp" />
+    </action>
+    <action path="/viewFacultyOnlineMaster" type="com.dts.project.action.ViewFacultyOnlineMasterAction">
+      <forward name="viewFacultyOnline" path="/ViewFacultyOnlineMaster.jsp" />
+    </action>
+    <action path="/viewStudentMaster" type="com.dts.project.action.ViewStudentMasterAction">
+      <forward name="viewStudents" path="/ViewStudentMaster.jsp" />
+    </action>
+    <action path="/viewStudentOnline" type="com.dts.project.action.ViewStudentOnlineAction">
+      <forward name="viewStudentOnline" path="/ViewStudentOnline.jsp" />
+    </action>
+    <action path="/viewExaminationSchedule" type="com.dts.project.action.ViewExaminationScheduleAction">
+      <forward name="viewExaminationSchedule" path="/ViewExaminationSchedule.jsp" />
+    </action>
+    <action path="/viewChatRoomMaster" type="com.dts.project.action.ViewChatRoomMasterAction">
+      <forward name="viewChatRoom" path="/ViewChatRoomMaster.jsp" />
+    </action>
+    <action path="/viewsNewsLetterMaster" type="com.dts.project.action.ViewsNewsLetterMasterAction">
+      <forward name="viewNewsLetter" path="/ViewNewsLetterMaster.jsp" />
+    </action>
+    <action path="/viewEmailMaster" type="com.dts.project.action.ViewEmailMasterAction">
+      <forward name="viewEmails" path="/ViewEmailMaster.jsp" />
+    </action>
+    <action path="/viewVoiceMailBoxMaster" type="com.dts.project.action.ViewVoiceMailBoxMasterAction">
+      <forward name="viewVoiceMailBoxMaster" path="/ViewVoiceMailBoxMaster.jsp" />
+    </action>
+    <action path="/viewStdntAssignmentSubmission" type="com.dts.project.action.ViewStdntAssignmentSubmissionAction">
+      <forward name="viewStdntAssignSubmission" path="/ViewStudentAssignSubmissionMaster.jsp" />
+    </action>
+    <action path="/viewFacultyAchievements1" type="com.dts.project.action.ViewFacultyAchievements1Action">
+      <forward name="viewFacultyAchievements1" path="/ViewFacultyAchievements1.jsp" />
+    </action>
+    <action path="/viewFacultyOnlineMaster1" type="com.dts.project.action.ViewFacultyOnlineMaster1Action">
+      <forward name="viewFacultyOnlineMaster1" path="/ViewFacultyOnlineMaster1.jsp" />
+    </action>
+    <action path="/viewStudents1" type="com.dts.project.action.ViewStudents1Action">
+      <forward name="viewStudents1" path="/ViewStudentMaster1.jsp" />
+    </action>
+    <action path="/viewStudentsOnline1" type="com.dts.project.action.ViewStudentsOnline1Action">
+      <forward name="viewStudentsOnline1" path="/ViewStudentOnline1.jsp" />
+    </action>
+    <action path="/viewStudentCourse" type="com.dts.project.action.ViewStudentCourseAction">
+      <forward name="viewStudentCourse" path="/ViewStudentCourseMaster.jsp" />
+    </action>
+    <action path="/viewChatRoomMaster1" type="com.dts.project.action.ViewChatRoomMaster1Action">
+      <forward name="viewChatRoomMaster1" path="/ViewChatRoomMaster1.jsp" />
+    </action>
+    <action path="/viewNewsLetter1" type="com.dts.project.action.ViewNewsLetter1Action">
+      <forward name="viewNewsLetter1" path="/ViewNewsLetterMaster1.jsp" />
+    </action>
+    <action path="/viewEmailMaster1" type="com.dts.project.action.ViewEmailMaster1Action">
+      <forward name="viewEmailMaster1" path="/ViewEmailMaster1.jsp" />
+    </action>
+    <action path="/viewFacultyNotices" type="com.dts.project.action.ViewFacultyNoticesAction">
+      <forward name="viewFacultyNotices" path="/ViewFacultyNoticesMaster.jsp" />
+    </action>
+    <action path="/viewStudentNotices" type="com.dts.project.action.ViewStudentNoticesAction">
+      <forward name="viewFacultyNotices" path="/ViewStudentNoticesMaster.jsp" />
+    </action>
+    
+    <action path="/viewFacultyAchievements2" type="com.dts.project.action.ViewFacultyAchievements2Action">
+      <forward name="viewFacultyAchuievements2" path="/ViewFacultyAchievements2.jsp" />
+    </action>
+    <action path="/viewFacultyOnlineMaster2" type="com.dts.project.action.ViewFacultyOnlineMaster2Action">
+      <forward name="viewFacultyOnline2" path="/ViewFacultyOnlineMaster2.jsp" />
+    </action>
+    <action path="/viewStudentAttendance" type="com.dts.project.action.ViewStudentAttendanceAction">
+      <forward name="viewStudntAttendence" path="/ViewStudentAttendenceMaster.jsp" />
+    </action>
+    <action path="/viewStudentsOnline" type="com.dts.project.action.ViewStudentsOnlineAction">
+      <forward name="viewStudentOnline2" path="/ViewStudentOnline2.jsp" />
+    </action>
+    <action path="/viewCourseFaculty" type="com.dts.project.action.ViewCourseFacultyAction">
+      <forward name="viewCourseFaculty" path="/ViewCourseFacultyMaster.jsp" />
+    </action>
+    
+    <action path="/viewExamQuestionMaster" type="com.dts.project.action.ViewExamQuestionMasterAction">
+      <forward name="viewExamQuestion" path="/ViewExamQuestionMaster.jsp" />
+    </action>
+    <action
+    attribute="examQuestionMasterForm"
+    name="examQuestionMasterForm"
+    scope="request" 
+    path="/examQuestionMaster" type="com.dts.project.action.ExamQuestionMasterAction">
+      <forward name="success" path="/ExamQuestionMaster.jsp?status=adding examQuestion success" />
+      <forward name="failure" path="/ExamQuestionMaster.jsp?status=adding examQuestion failure" />
+    </action>
+    <action path="/viewStudentExaminationDetails" type="com.dts.project.action.ViewStudentExaminationDetailsAction">
+      <forward name="viewStudentExamDetails" path="/ViewStudentExaminationDetails.jsp" />
+    </action>
+    <action path="/viewChatRoomMaster2" type="com.dts.project.action.ViewChatRoomMaster2Action">
+      <forward name="viewChatRoomMaster2" path="/ViewChatRoomMaster2.jsp" />
+    </action>
+    <action path="/viewNewsLetterMaster2" type="com.dts.project.action.ViewNewsLetterMaster2Action">
+      <forward name="viewNewsLetter2" path="/ViewNewsLetterMaster2.jsp" />
+    </action>
+    <action path="/viewEmailMaster2" type="com.dts.project.action.ViewEmailMaster2Action">
+      <forward name="viewEmailMaster2" path="/ViewEmailMaster2.jsp" />
+    </action>
+    <action path="/viewStudentExamination" type="com.dts.project.action.ViewStudentExaminationAction">
+      <forward name="viewStudentExamination" path="/ViewStudentExaminationMaster.jsp" />
+    </action>
+    <action path="/viewCourseMaster1" type="com.dts.project.action.ViewCourseMaster1Action">
+      <forward name="viewCourseMaster1" path="/ViewCourseMaster1.jsp" />
+    </action>
+    <action path="/viewGeneralCourseMaster" type="com.dts.project.action.ViewCourseMaster1Action">
+      <forward name="viewCourseMaster1" path="/GeneralViewCourseMaster1.jsp" />
+    </action>
+    
+    <action path="/viewNewsLetter3" type="com.dts.project.action.ViewNewsLetter3Action">
+      <forward name="viewNewsLetter" path="/ViewNewsLetterMaster3.jsp" />
+    </action>
+    <action path="/viewStudents3" type="com.dts.project.action.ViewStudents3Action">
+      <forward name="viewStudetns" path="/ViewStudentMaster3.jsp" />
+    </action>
+    <action path="/viewFacultyMaster1" type="com.dts.project.action.ViewFacultyMaster1Action">
+      <forward name="viewFaculty" path="/ViewFacultyMaster1.jsp" />
+    </action>
+    <action path="/viewCourseLectureMaster" type="com.dts.project.action.ViewCourseLectureMasterAction">
+      <forward name="viewCourseLecture" path="/ViewCourseLecturerMaster.jsp" />
+    </action>
+    <action path="/viewCourseMaster2" type="com.dts.project.action.ViewCourseMaster2Action">
+      <forward name="viewCourses2" path="/ViewCourseMaster2.jsp" />
+    </action>
+    <action path="/viewFeedBack" type="com.dts.project.action.ViewFeedBackAction">
+      <forward name="viewFeedbacks" path="/ViewFeedbacks.jsp" />
+    </action>
+    <action path="/viewStudentAddignSubmissionMaster1" type="com.dts.project.action.ViewStudentAddignSubmissionMaster1Action">
+      <forward name="viewStudentAssignSubmission1" path="/ViewStudentAssignSubmissionMaster1.jsp" />
+    </action>
+    <action path="/viewCourseMaster3" type="com.dts.project.action.ViewCourseMaster3Action">
+      <forward name="viewCourseMaster3" path="/ViewCourseMaster3.jsp" />
+    </action>
+    <action path="/changePassword" type="com.dts.project.action.ChangeSPasswordAction">
+      <forward name="success" path="/Changepassword.jsp?status=change password success" />
+      <forward name="failure" path="/Changepassword.jsp?status=change password failure" />
+    </action>
+    <action path="/studentChangePassword" type="com.dts.project.action.StudentChangePasswordAction">
+      <forward name="success" path="/StudentChangePassword.jsp?status=changePassword success" />
+      <forward name="failure" path="/StudentChangePassword.jsp?status=change Password failure" />
+    </action>
+    <action path="/adminChangePassword" type="com.dts.project.action.AdminChangePasswordAction">
+      <forward name="success" path="/AdminChangePassword.jsp?status=change password success" />
+      <forward name="failure" path="/AdminChangePassword.jsp?status=chnage password failure" />
+    </action>
+    <action path="/viewExaminationSchedule1" type="com.dts.project.action.ViewExaminationSchedule1Action">
+      <forward name="viewExaminationSchedule" path="/ViewExaminationSchedule1.jsp" />
+    </action>
+    
+    <action path="/viewCourseLectureMaster1" type="com.dts.project.action.ViewCourseLectureMasterAction1">
+      <forward name="viewCourseLecture" path="/FacultyViewCourseLecturerMaster.jsp" />
+    </action>
+    
+    
+
+  </action-mappings>
+
+  <message-resources parameter="com.yourcompany.struts.ApplicationResources" />
+</struts-config>
+
